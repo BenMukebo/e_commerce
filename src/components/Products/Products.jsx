@@ -4,12 +4,12 @@ import {  Grid } from '@material-ui/core';
 import Product from './Product/Product';
 import useStyles from './styles';
 
-const products = [
-  {id: 1, name: 'shoes', description: 'Runnind shoes.', price: '$5', image: 'https://user-images.githubusercontent.com/79058364/175802212-ae743832-4c70-4cd2-b7a3-81428102b3e5.jpeg'},
-  {id: 2, name: 'Macbook', description: 'Apple mackbook.', price: '$10', image: 'https://user-images.githubusercontent.com/79058364/175802292-f3d12888-f296-4ca2-a7f2-7e689d6d7385.jpeg'},
-];
+// const products = [
+//   {id: 1, name: 'shoes', description: 'Runnind shoes.', price: '$5', image: 'https://user-images.githubusercontent.com/79058364/175802212-ae743832-4c70-4cd2-b7a3-81428102b3e5.jpeg'},
+//   {id: 2, name: 'Macbook', description: 'Apple mackbook.', price: '$10', image: 'https://user-images.githubusercontent.com/79058364/175802292-f3d12888-f296-4ca2-a7f2-7e689d6d7385.jpeg'},
+// ];
 
-const Products = () => {
+const Products = ({  products }) => {
   const classes = useStyles();
 
   return (
