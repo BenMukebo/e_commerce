@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Products } from './components';
 import { commerce } from './lib/commerce';
 
@@ -12,6 +12,11 @@ const App = () => {
     setProducts(data);
   };
 
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  console.log(products)
 
   return (
     <div>
