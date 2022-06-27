@@ -20,11 +20,11 @@ const App = () => {
   return (
     <div>
       <Navbar/>
-      <Products/>
+      <Products />
     </div>
   )
-}
+};
 
-export default App
+export default App;
 
 // rafce
