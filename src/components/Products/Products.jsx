@@ -2,6 +2,7 @@ import React from 'react';
 import {  Grid } from '@material-ui/core';
 
 import Product from './Product/Product';
+import useStyles from './styles';
 
 const products = [
   {id: 1, name: 'shoes', description: 'Runnind shoes.', price: '$5', image: 'https://user-images.githubusercontent.com/79058364/175802212-ae743832-4c70-4cd2-b7a3-81428102b3e5.jpeg'},
@@ -9,8 +10,11 @@ const products = [
 ];
 
 const Products = () => {
+  const classes = useStyles();
+
   return (
-    <main>
+    <main className={classes.content}>
+      <div className={classes.toolbar} />
       <Grid container justify="center" spacing={4}>
         {products.map((product) => (
           <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
