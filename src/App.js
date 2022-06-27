@@ -6,6 +6,11 @@ const App = () => {
 
   const [products, setProducts] = useState([]);
 
+  const fetchProducts = async () => {
+    const { data } = await commerce.products.list();
+
+    setProducts(data);
+  };
 
 
   return (
