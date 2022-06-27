@@ -3,7 +3,6 @@ import { Navbar, Products } from './components';
 import { commerce } from './lib/commerce';
 
 const App = () => {
-
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
