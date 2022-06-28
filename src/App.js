@@ -20,6 +20,7 @@ const App = () => {
     const item = await commerce.cart.add(productId, quantity);
 
     setCart(item.cart);
+    console.log(cart);
   };
 
   useEffect(() => {
@@ -28,7 +29,7 @@ const App = () => {
   }, []);
 
   // console.log(products);
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <div>
