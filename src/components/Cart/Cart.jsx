@@ -8,8 +8,8 @@ import useStyles from './styles';
 
 const Cart = ({ cart }) => {
   const classes = useStyles();
-  const isEmpty = !cart.line_items?.length;
-  // console.log(cart.line_items?.length);
+  // const isEmpty = !cart.line_items?.length;
+  // console.log(cart.line_items?.length); ?: just mean wait for the data load
 
   const EmptyCart = () => (
     <Typography variant="subtitle1">
@@ -40,12 +40,14 @@ const Cart = ({ cart }) => {
     </>
   );
 
+  if (!cart.line_items) return 'Loading';
+
   return (
     <Container>
       <div className={classes.toolbar} />
       <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
-      { isEmpty ? <EmptyCart /> : <FilledCart /> }
-      {/* { isEmpty ? <div>EmptyCart</div> : <div>FilledCart</div> } */}
+      {/* { isEmpty ? <EmptyCart /> : <FilledCart /> } */}
+      { !cart.line_items.length ? <EmptyCart /> : <FilledCart /> }
 
     </Container>
   );
