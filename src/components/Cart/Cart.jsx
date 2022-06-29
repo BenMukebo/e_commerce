@@ -11,7 +11,7 @@ const Cart = ({ cart }) => {
   const classes = useStyles();
   // const isEmpty = !cart.line_items?.length;
   // console.log(cart.line_items?.length); ?: just mean wait for the data load
-  console.log(cart);
+  // console.log(cart);
 
   const EmptyCart = () => (
     <Typography variant="subtitle1">
