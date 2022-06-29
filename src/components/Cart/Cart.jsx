@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
@@ -47,8 +45,8 @@ const Cart = ({ cart }) => {
       <div className={classes.toolbar} />
       <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
       { isEmpty ? <EmptyCart /> : <FilledCart /> }
-      {/* { isEmpty ? <FilledCart /> : <EmptyCart /> } */}
-      { isEmpty ? <div>EmptyCart</div> : <div>FilledCart</div> }
+      {/* { isEmpty ? <div>EmptyCart</div> : <div>FilledCart</div> } */}
+
     </Container>
   );
 };
