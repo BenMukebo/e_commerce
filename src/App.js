@@ -1,8 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { Navbar, Products, Cart } from './components';
 import { commerce } from './lib/commerce';
@@ -37,13 +36,15 @@ const App = () => {
   // console.log(cart);
 
   return (
-    <div>
-      <Navbar totalItems={cart.total_items} />
-      <Routes>
-        <Route exact path="/" element={<Products products={products} onAddToCart={handleAddToCart} />} />
-        <Route exact path="/cart" element={<Cart cart={cart} />} />
-      </Routes>
-    </div>
+    <Router>
+      <div>
+        <Navbar totalItems={cart.total_items} />
+        <Routes>
+          <Route exact path="/" element={<Products products={products} onAddToCart={handleAddToCart} />} />
+          <Route exact path="/cart" element={<Cart cart={cart} />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
