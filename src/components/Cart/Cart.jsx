@@ -46,7 +46,7 @@ const Cart = ({
           {cart.subtotal.formatted_with_symbol}
         </Typography>
         <div>
-          <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" >Empty cart</Button>
+          <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={onEmptyCart}>Empty cart</Button>
           <Button className={classes.checkoutButton} size="large" type="button" variant="contained" color="primary">Checkout</Button>
         </div>
       </div>
