@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -65,7 +66,11 @@ const App = () => {
         <Navbar totalItems={cart.total_items} />
         <Routes>
           <Route exact path="/" element={<Products products={products} onAddToCart={handleAddToCart} />} />
-          <Route exact path="/cart" element={<Cart cart={cart} />} />
+          <Route
+            exact
+            path="/cart"
+            element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />}
+          />
         </Routes>
       </div>
     </Router>
